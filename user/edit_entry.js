@@ -16,6 +16,13 @@ var form_edit_passwd = document.getElementById("edit_passwd");
 var form_edit_submit_btn = document.getElementById("edit_submit_btn");
 
 
+
+if(sessionStorage.getItem('notification') != null) {
+    let alert_date = JSON.parse(sessionStorage.getItem('notification'));
+    notificationAlert(alert_date.title, alert_date.text, alert_date.duration);
+    sessionStorage.removeItem('notification');
+}
+
 //-----------------------Eintrag--bearbeiten--------------------------------------------------------------------------------------
 tb_btn_edit.forEach((el) => {
     el.addEventListener("click", () => {
@@ -45,7 +52,7 @@ form_edit_submit_btn.addEventListener("click", async () => {
     } else {
         try {
             const confirmed = await confirmAlert(
-                "Sicher, dass du den Eintrag zu:\nUsername: \t" + form_edit_username.value +            //hier weitermachen
+                "Sicher, dass du den Eintrag zu:\nUsername: \t" + form_edit_username.value +
                 "\nSecurity Level: \t" + form_edit_sec_lvl.value + 
                 "\nNFC-UID: \t" + form_edit_nfc_uid.value + 
                 "\nPasswort: \t" + form_edit_passwd.value +
@@ -57,12 +64,11 @@ form_edit_submit_btn.addEventListener("click", async () => {
                     type: "POST",
                     url: 'edit_user_entry.php',
                     data: {
-                        operation: "edit", 
                         id: entry_id,
-                        datetime: datetime_value,
+                        username: form_edit_username.value,
+                        sec_lvl: form_edit_sec_lvl.value,
                         nfc_uid: form_edit_nfc_uid.value,
-                        nfc_tag: form_edit_name.value,
-                        int_datetime: form_edit_formatted_date.value
+                        passwd: form_edit_passwd.value
                     },
                     success: function(response) {
                         var jsonData = JSON.parse(response);

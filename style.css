@@ -75,6 +75,16 @@ input[type=submit]{
     align-items: center;
 }
 
+.btn {
+    margin-left: 10px;
+    color: white;
+    background: #A63D40;
+    border: none;
+    height: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .btn-add {
     margin-left: 10px;
     color: white;

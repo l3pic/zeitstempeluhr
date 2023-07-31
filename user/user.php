@@ -11,10 +11,10 @@
     <script src="https://kit.fontawesome.com/d2f6aa7ce4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
     <script src="http://192.168.0.103/scripts/jquery-3.7.0.min.js"></script>
+    <script src="../functions.js" defer></script>
     <script src="./toggle_switches.js" defer></script>
     <script src="./edit_entry.js" defer></script>
     <script src="./add_entry.js" defer></script>
-    <script src="../functions.js" defer></script>
 </head>
 <body>
     <?php
@@ -37,11 +37,6 @@
                 <input type='checkbox' id='btn_editmode'>
                 <span class='slider round'></span>
             </label>
-        </div>
-
-        <div class='topper-add'>
-            <span>HINZUFÜGEN:</span>
-            <button class='btn-add' id='btn_add_user'><i class='fa-solid fa-plus'></i></button>
         </div>
     </div>
 

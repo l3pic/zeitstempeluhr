@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d2f6aa7ce4.js" crossorigin="anonymous"></script>
     <script src="http://192.168.0.103/scripts/jquery-3.7.0.min.js"></script>
-    <script src='./edit_entry.js' defer></script>
-    <script src='./add_entry.js' defer></script>
     <script src='../functions.js' defer></script>
+    <script src='./edit_entry.js' defer></script>
+    <script src='./add_entry.js' defer></script> 
 </head>
 <body>
     <?php include '../sidenav.php'; ?>
 
     <div class="topper">
         <form action="zeiten.php" method="GET" class="topper-zeiten">
+            <button class="btn" id="clear_datefilters">Zeitfilter entfernen</button>
             <div class="zeitraum">
                 <span>VON:</span>
                 <input type="date" name="from" id="date_form_1">

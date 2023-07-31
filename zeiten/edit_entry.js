@@ -15,6 +15,16 @@ var notification_alert = document.getElementById("notification_alert");
 var notification_alert_pbar = document.getElementById("notification_alert_pbar");
 var notification_text = document.getElementById("notification_text");
 var notification_title = document.getElementById("notification_title");
+var clear_datefilters_btn = document.getElementById("clear_datefilters");
+var date_form_1 = document.getElementById("date_form_1");
+var date_form_2 = document.getElementById("date_form_2");
+
+//----------------------------------
+clear_datefilters_btn.addEventListener("click", (event) => {
+    date_form_1.value = "";
+    date_form_2.value = "";
+    event.preventDefault();
+})
 
 
 //-----------------------Sessionstorage--überprüfen----------------------------------------------------------------------------
