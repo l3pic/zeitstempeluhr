@@ -1,3 +1,7 @@
+var notification_title = document.getElementById("notification_title");
+var notification_text = document.getElementById("notification_text");
+var notification_alert_pbar = document.getElementById("notification_alert_pbar");
+
 //----------------------Funktionen---------------------------------------------------------------------------------------------------------------
 //----------------------formatieren--von--Daten--------------------------------------------------
 function dateToDateInputFormat(dt_tbval) {

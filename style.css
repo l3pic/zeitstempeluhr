@@ -63,6 +63,26 @@ input[type=submit]{
     margin-left: 201px;
 }
 
+.topper-docs {
+    border-bottom: #8A8E91 solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: calc(100% - 201px);
+    margin-left: 201px;
+    padding: 5px;
+}
+
+.topper-docs select {
+    background: #2B2C28;
+    color: white;
+    margin-right: 10px;
+}
+
+.topper-docs input {
+    margin-right: 10px;
+}
+
 .topper-zeiten {
     padding: 10px;
     display: flex;
@@ -79,6 +99,7 @@ input[type=submit]{
     margin-left: 10px;
     color: white;
     background: #A63D40;
+    min-width: 124px;
     border: none;
     height: 34px;
     text-align: center;
@@ -164,7 +185,7 @@ tr:nth-child(even) {
     width: 300px;
 }
 
-#date_form_1, #date_form_2{
+#date_form_1, #date_form_2, #from, #to{
     border: 1px solid #8A8E91;
     border-radius: 0px;
     outline: none;

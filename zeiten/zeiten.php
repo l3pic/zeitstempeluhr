@@ -68,7 +68,7 @@
             <?php
                 if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
-                if ($_SESSION["logged_in"] != true) header("Location: ./index.php");
+                if ($_SESSION["logged_in"] != true) header("Location: /index.php");
 
                 if (array_key_exists('from', $_GET) && array_key_exists('to', $_GET)) {
                     $start = (int)(str_replace("-", "", $_GET['from']) . "0000");

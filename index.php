@@ -9,21 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Kanit&display=swap" rel="stylesheet">
+    <script src="./clock.js" defer></script>
 </head>
 <body>
+    <div class="notification-alert hide" id="notification_alert">
+        <span class="notification-title" id="notification_title"></span>
+        <span class="notification-text" id="notification_text"></span>
+        <progress max="100" value="50" id="notification_alert_pbar"></progress>
+    </div>
     <?php
         if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
         if (array_key_exists("logged_in", $_SESSION)) {
             if ($_SESSION["logged_in"] === true) {
                 header("Location: ./zeiten/zeiten.php");
+            } else if ($_SESSION["logged_in"] == false && array_key_exists("login_error", $_SESSION)) {
+                echo ("<script src='./functions.js'></script><script defer>notificationAlert('Fehler', '" . $_SESSION["login_error"] . "', 5);</script>");
+                session_destroy();
             }
         }
     ?>
     <div class="main-login">
         <div id="clockDisplay" class="time" onload="showTime();"></div>
         <div id="dateDisplay" class="date" onload="showDate();"></div>
-        <script src="./clock.js"></script>
 
         <form action="login.php" method="post" class="login-form">
             <input type="text" name="username" placeholder="Nutzername" autocomplete="off">

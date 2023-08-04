@@ -18,7 +18,7 @@
                 <span class='user-info-h'>NFC-UID: </span>
                 <span class='user-info-t' id='nfc_uid'>" . $_SESSION["nfc_uid"] . "</span>
             </div>
-            <script src='../sidenav.js'></script>
+            <script src='/sidenav.js'></script>
         </div>
     "); 
 ?>
