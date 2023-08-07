@@ -9,7 +9,7 @@ switch (path) {
         document.getElementById("user").style.background = "#A63D40";
         break;
 
-    case "/docs.php":
+    case "/docs/docs.php":
         document.getElementById("docs").style.background = "#A63D40";
         break;
 }

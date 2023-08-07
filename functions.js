@@ -47,6 +47,7 @@ async function confirmAlert(text) {
 
         alert_cancel.addEventListener("click", () => {
             confirm_alert.classList.add('hide');
+            backdrop.classList.add('hide');
             resolve(false);
         });
     });

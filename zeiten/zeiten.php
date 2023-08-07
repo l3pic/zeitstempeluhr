@@ -134,17 +134,25 @@
     <div class="backdrop hide" id="backdrop"></div>
 
     <div class="edit-form hide" id="edit_form">
+        <span>Name</span>
         <input type="text" id="edit_name" placeholder="Name"></input>
+        <span>Datum</span>
         <input type="datetime-local" id="edit_date"></input>
+        <span>int_Datum</span>
         <input type="text" disabled placeholder="formatiertes Datum" id="formatted_date"></input>
+        <span>NFC-UID</span>
         <input type="text" id="edit_nfc_uid" placeholder="NFC-UID"></input>
         <button id="edit_submit_btn">Ändern</button>
     </div>
 
     <div class="add-form hide" id="add_form">
+        <span>Name</span>
         <select name="user" id="select_user"></select>
+        <span>Datum</span>
         <input type="datetime-local" id="add_date"></input>
+        <span>int_Datum</span>
         <input type="text" disabled placeholder="formatiertes Datum" id="formatted_add_date"></input>
+        <span>NFC-UID</span>
         <input type="text" disabled placeholder="NFC-UID" id="add_nfc_uid"></input>
         <button id="add_submit_btn">Erstellen</button>
     </div>

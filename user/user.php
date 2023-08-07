@@ -14,7 +14,6 @@
     <script src="../functions.js" defer></script>
     <script src="./toggle_switches.js" defer></script>
     <script src="./edit_entry.js" defer></script>
-    <script src="./add_entry.js" defer></script>
 </head>
 <body>
     <?php
@@ -90,19 +89,15 @@
     <div class="backdrop hide" id="backdrop"></div>
 
     <div class="edit-form hide" id="edit_form">
+        <span>Name</span>
         <input type="text" id="edit_username" placeholder="Name"></input>
+        <span>Security Level</span>
         <input type="number" id="edit_sec_lvl"></input>
+        <span>NFC-UID</span>
         <input type="text" id="edit_nfc_uid"></input>
+        <span>Passwort</span>
         <input type="text" id="edit_passwd"></input>
         <button id="edit_submit_btn">Ändern</button>
-    </div>
-
-    <div class="add-form hide" id="add_form">
-        <select name="user" id="select_user"></select>
-        <input type="datetime-local" id="add_date"></input>
-        <input type="text" disabled placeholder="formatiertes Datum" id="formatted_add_date"></input>
-        <input type="text" disabled placeholder="NFC-UID" id="add_nfc_uid"></input>
-        <button id="add_submit_btn">Erstellen</button>
     </div>
 
     <div class="confirm-alert hide" id="confirm_alert">

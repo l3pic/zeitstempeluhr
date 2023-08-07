@@ -45,8 +45,8 @@ create_btn.addEventListener("click", () => {
         },
         success: function(response) {
             jsonData = JSON.parse(response);
-    
-            console.log(jsonData)
+            console.log(jsonData);
+            location.reload();
         }
     });
 })

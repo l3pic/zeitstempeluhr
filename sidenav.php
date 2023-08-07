@@ -7,7 +7,7 @@
     if ($_SESSION["sec_lvl"] == 0) {
         echo ("
             <a href='/user/user.php' id='user'>Nutzerverwaltung</a>
-            <a href='/docs.php' id='docs'>Zeitprotokolle</a>
+            <a href='/docs/docs.php' id='docs'>Zeitprotokolle</a>
         ");
     }
     echo (" <a href='/logout.php' id='logout_btn'>Abmelden</a> ");

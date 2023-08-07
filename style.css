@@ -132,7 +132,7 @@ input[type=submit]{
 
 table {
     text-align: center;
-    width: calc(100% - 10px);
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -287,6 +287,11 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+.edit-form span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
 .add-form {
     position: absolute;
     top: 50%;
@@ -302,8 +307,8 @@ tr:nth-child(even) {
 }
 
 .add-form span {
-    margin: 10px;
-    font-size: 15px;
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 .backdrop {
@@ -399,7 +404,31 @@ tr:nth-child(even) {
 .blur-text {
     text-shadow: 0 0 10px white;
     color: transparent;
- }
+}
+
+/* docs */
+.docstable {
+    width: calc(100% - 201px);
+    margin-left: 201px;
+}
+
+.docstable a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.filename-tb {
+    display: flex;
+    padding-left: 30px;
+    justify-content: left;
+}
+
+.docstable svg {
+    fill: white;
+    height: 20px;
+    cursor: pointer;
+}
 
 /* Switch */
 .switch {
