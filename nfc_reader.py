@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import sys
+sys.path.append('/var/py/')
+
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
 import mysql.connector
