@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d2f6aa7ce4.js" crossorigin="anonymous"></script>
-    <script src="http://192.168.0.103/scripts/jquery-3.7.0.min.js"></script>
+    <script src="/scripts/jquery-3.7.0.min.js"></script>
     <script src='/functions.js' defer></script>
     <script src="./docs.js" defer></script>
 </head>
