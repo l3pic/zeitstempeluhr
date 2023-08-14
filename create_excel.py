@@ -61,3 +61,5 @@ for zeitstempel in (data):
     row += 1
 
 workbook.close();
+
+print("done")
