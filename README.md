@@ -13,6 +13,7 @@ Furthermore, the admin possesses the capability to reset passwords for all users
 - 7.8k Ω resistor<br>
 - 2.4k Ω resistor<br>
 - 2x 220 Ω resistor<br>
+- (NO-switch)
 
 ## How to connect them together:<br>
 You will require 220 Ω resistors for both LEDs. As for the LCD display, you'll need a 7.8k Ω resistor connected to the 5V source, and a 2.4k Ω resistor connected to the ground (GND). Both of these resistors should be linked to the contrast pin on the LCD display. Additional details are illustrated in the provided diagram below.<br>
