@@ -9,7 +9,7 @@ Things needed:<br>
 - 2.4k Ω resistor<br>
 - 2x 220 Ω resistor<br>
 <br>
-How to connect them together:<br>
+## How to connect them together:<br>
 For both LED´s you need the 220 Ω resistors. And for the LCD display you need the<br>
 7.8k Ω resistor which is connected to 5V and the 2.4k Ω resistor which is connected to<br>
 GND. Both of those resistors need to be connected to the contrast pin on the LCD display.<br>
@@ -18,7 +18,7 @@ The rest you can see on the sketch below.<br>
 <img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/3239bce0-c845-47a5-8cd6-17c99981fa6d" height="400px">
 <img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/a2cc2858-8749-4952-968d-76d5a2dd40de" height="400px">
 
-How to install:<br>
+## How to install:<br>
 First download the “_setup.sh_” file. This script installs all required services, libraries and
 other files.<br>
 The file needs to copied onto the Raspberry Pi. For that SSH needs to be enabled on the
