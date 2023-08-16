@@ -65,3 +65,7 @@ Replace [pathtofile] with the actual path to the "setup.sh" file.
 ```
 Be prepared for this process to take some time. The Raspberry Pi will automatically restart once the installation is complete.
 
+
+## Additional
+Additionally you can add an powerswitch which is recommended. For that you will need an NO-switch (normally open switch). It needs to be connected to the GPIO3 (Pin5) and to GND (Pin6) as shown in the picture below. <br>
+<img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/3732424e-04ef-4d1d-9158-3a97a83978b5" height="400px">
