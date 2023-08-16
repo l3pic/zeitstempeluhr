@@ -22,24 +22,6 @@ You will require 220 Ω resistors for both LEDs. As for the LCD display, you'll 
 <img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/a2cc2858-8749-4952-968d-76d5a2dd40de" height="400px">
 
 ## How to install:<br>
-First download the “_[setup.sh](https://github.com/l3pic/zeitstempeluhr/blob/6ad1e21299b0d6f92adeb337b7bd7ac15bc547a1/setup.sh)_” file. This script installs all required services, libraries and
-other files.<br>
-The file needs to copied onto the Raspberry Pi. For that SSH needs to be enabled on the
-Raspberry Pi. [Here](https://www.elektronik-kompendium.de/sites/raspberry-pi/1906281.htm) you can see how you do that.<br>
-Now you need to open the CMD (_Windows + R --> “cmd”_) and change the directory to
-where you have put your “setup.sh” file. Now you can type
-“_scp .\setup.sh [user]@[host]:/home/[user]_” to copy the file in the home directory of
-the _[user]_. For _[user]_ you can write “pi” because that is a standard user which should
-always exist if you have installed the Raspberry OS. _[host]_ is the IP-Address of your
-Raspberry Pi.<br>
-When the file was successfully copied onto the Raspberry Pi you need to change some
-rights to be able to execute it. To do so type “_chmod +x /[pathtofile]/setup.sh_”.
-Now if you are in the directory where your “setup.sh” file is located you can execute it with
-“_./setup.sh_”.
-
-
-
-
 Begin by downloading the “_[setup.sh](https://github.com/l3pic/zeitstempeluhr/blob/6ad1e21299b0d6f92adeb337b7bd7ac15bc547a1/setup.sh)_” file. This script is designed to facilitate the installation of all necessary services, libraries, and other essential files.<br>
 <br>
 To proceed, copy the downloaded file onto the Raspberry Pi device. To achieve this, you'll need to enable SSH on the Raspberry Pi. You can find instructions on how to enable SSH [here](https://www.elektronik-kompendium.de/sites/raspberry-pi/1906281.htm).<br>
