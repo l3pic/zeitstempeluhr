@@ -29,6 +29,8 @@ mv ./zeitstempeluhr/nfc_reader.py /var/py/nfc_reader.py
 mv ./zeitstempeluhr/create_excel.py /var/py/create_excel.py
 mv ./zeitstempeluhr/MFRC522.py /var/py/MFRC522.py
 rm /var/www/html/index.html
+rm ./zeitstempeluhr/README.md
+rm ./zeitstempeluhr/setup.sh
 mv ./zeitstempeluhr/* /var/www/html
 rm -rf ./zeitstempeluhr
 
