@@ -8,7 +8,7 @@ Things needed:<br>
 - 7.8k Ω resistor<br>
 - 2.4k Ω resistor<br>
 - 2x 220 Ω resistor<br>
-<br>
+
 ## How to connect them together:<br>
 For both LED´s you need the 220 Ω resistors. And for the LCD display you need the<br>
 7.8k Ω resistor which is connected to 5V and the 2.4k Ω resistor which is connected to<br>
