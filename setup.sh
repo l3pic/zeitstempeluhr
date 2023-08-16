@@ -39,10 +39,15 @@ chmod +x /var/py/
 chown -R www-data:www-data /var/www/html/excel/
 chmod -R 755 /var/www/html/excel/
 
+git clone https://github.com/Howchoo/pi-power-button.git
+./pi-power-button/script/install
+
 printf "${BLUE}Installing Python libraries\n${NC}"
 pip3 install RPi.GPIO
 pip3 install mysql-connector-python
 pip3 install xlsxwriter
+
+
 
 git clone https://github.com/pimylifeup/Adafruit_Python_CharLCD.git
 python3 ./Adafruit_Python_CharLCD/setup.py install
