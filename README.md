@@ -1,5 +1,7 @@
 # zeitstempeluhr
-This is a self created timestamp clock which creates an entry in a database with the saved key on an rfid-chip, whenever someone holds their chip to the rfid-reader. When installing their is an standard account called "_admin_" with the password "_rDeYVwBzds_" created. With this username and password you can login into the webinterface. The admin account can create, edit, delete timestamps manually. He is also able to change the key of an rfid-chip. The key should be the name of the person. If an card is registered and the nfc-uid already exists but the key doesn´t match the one in the database it gets overwritten. So if you have an new chip you can hold it onto the rfid-reader and an new user will get created. Now you can change the key with the admin account to a name and the next time the chip will get overwritten with the ne key. The admin also can change the password of every user. He is also able to create excel files for each person with the timestamps. You can choose an timespan in which all timestamps will be saved to an excel file. If you create an excel file for the same person in the same timespan the already existing file gets overwritten. When an excel file is created you can download it. Every normal user can also login and see their timestamps but he can´t edit any entrys.
+This is a self-created timestamp clock designed to generate entries in a database when an RFID chip is presented to the RFID reader. During installation, a default account named "_admin_" is established, with the password "_rDeYVwBzds_". Using these credentials, the admin can access the web interface. The admin account holds the authority to manually create, modify, and delete timestamps. Additionally, the admin can update the key associated with an RFID chip, with the key being set as the person's name. If a registered card's NFC UID already exists in the system but the key doesn't match the database record, the key on the card itself is overwritten with the database's key value. Therefore, when a new chip is introduced and scanned by the RFID reader, a new user entry is generated. The admin can subsequently modify the key to a specified name, prompting subsequent chip interactions to overwrite the card's key with the new value.<br>
+<br>
+Furthermore, the admin possesses the capability to reset passwords for all users. This admin account also has the ability to generate individual Excel files containing timestamp records for each person. A chosen timeframe dictates which timestamps are compiled into the Excel file. If a file for the same individual and timeframe is generated again, the existing file is replaced. Once an Excel file is generated, it becomes available for download. Normal users can log in and view their timestamps, but they lack the permissions to modify any entries.
 
 
 ## Things needed:<br>
@@ -13,10 +15,7 @@ This is a self created timestamp clock which creates an entry in a database with
 - 2x 220 Ω resistor<br>
 
 ## How to connect them together:<br>
-For both LED´s you need the 220 Ω resistors. And for the LCD display you need the<br>
-7.8k Ω resistor which is connected to 5V and the 2.4k Ω resistor which is connected to<br>
-GND. Both of those resistors need to be connected to the contrast pin on the LCD display.<br>
-The rest you can see on the sketch below.<br>
+You will require 220 Ω resistors for both LEDs. As for the LCD display, you'll need a 7.8k Ω resistor connected to the 5V source, and a 2.4k Ω resistor connected to the ground (GND). Both of these resistors should be linked to the contrast pin on the LCD display. Additional details are illustrated in the provided diagram below.<br>
 <br>
 <img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/3239bce0-c845-47a5-8cd6-17c99981fa6d" height="400px">
 <img src="https://github.com/l3pic/zeitstempeluhr/assets/43809826/a2cc2858-8749-4952-968d-76d5a2dd40de" height="400px">
@@ -36,3 +35,33 @@ When the file was successfully copied onto the Raspberry Pi you need to change s
 rights to be able to execute it. To do so type “_chmod +x /[pathtofile]/setup.sh_”.
 Now if you are in the directory where your “setup.sh” file is located you can execute it with
 “_./setup.sh_”.
+
+
+
+
+Begin by downloading the “_[setup.sh](https://github.com/l3pic/zeitstempeluhr/blob/6ad1e21299b0d6f92adeb337b7bd7ac15bc547a1/setup.sh)_” file. This script is designed to facilitate the installation of all necessary services, libraries, and other essential files.<br>
+<br>
+To proceed, copy the downloaded file onto the Raspberry Pi device. To achieve this, you'll need to enable SSH on the Raspberry Pi. You can find instructions on how to enable SSH [here](https://www.elektronik-kompendium.de/sites/raspberry-pi/1906281.htm).<br>
+<br>
+Once SSH is enabled, you can follow these steps:<br>
+<br>
+- Open the Command Prompt (_Windows + R_, then type "_cmd_") and navigate to the directory where you have saved the "_setup.sh_" file.
+- Using the command:
+```cmd
+scp .\setup.sh [user]@[host]:/home/[user]
+```
+Copy the file to the home directory of the specified _[user]_ on the Raspberry Pi. Replace _[user]_ with "pi" if you're using the standard Raspberry OS user. _[host]_ should be replaced with the IP address of your Raspberry Pi. To do this you need to be in the directory where the "_setup.sh_" file is located.
+- Once the file is successfully copied to the Raspberry Pi, you'll need to adjust permissions to enable execution. Enter the following command: 
+```cmd
+ssh [user]@[host]
+```
+```cmd
+chmod +x /[pathtofile]/setup.sh
+```
+Replace [pathtofile] with the actual path to the "setup.sh" file.
+- If you're already in the directory containing the "setup.sh" file, execute it using:<br>
+```cmd
+./setup.sh
+```
+Be prepared for this process to take some time. The Raspberry Pi will automatically restart once the installation is complete.
+
