@@ -40,6 +40,27 @@ def uid_to_num(uid):
         n = n * 256 + uid[i]
     return n
 
+def write_no_block(text):
+    (status, TagType) = reader.MFRC522_Request(reader.PICC_REQIDL)
+    if status != reader.MI_OK:
+        return None, None
+    (status, uid) = reader.MFRC522_Anticoll()
+    if status != reader.MI_OK:
+        return None, None
+    id = uid_to_num(uid)
+    reader.MFRC522_SelectTag(uid)
+    status = reader.MFRC522_Auth(reader.PICC_AUTHENT1A, 11, KEY, uid)
+    reader.MFRC522_Read(11)
+    if status == reader.MI_OK:
+        data = bytearray()
+        data.extend(bytearray(text.ljust(len(BLOCK_ADDRS) * 16).encode('ascii')))
+        i = 0
+        for block_num in BLOCK_ADDRS:
+            reader.MFRC522_Write(block_num, data[(i*16):(i+1)*16])
+            i += 1
+    reader.MFRC522_StopCrypto1()
+    return id, text[0:(len(BLOCK_ADDRS) * 16)]
+
 GPIO.setwarnings(False)
 reading = bool(True)
 
@@ -119,7 +140,9 @@ while reading:
                         lcd.clear()
                         time.sleep(1)
                     else:
-                        reader.write(db_tag)
+                        id, text_in = write_no_block(db_tag)
+                        while not id:
+                            id, text_in = write_no_block(db_tag)
                         lcd.message('Tag erfolgreich\nueberschrieben')
                         GPIO.output(green_led, GPIO.LOW)
                         time.sleep(3)

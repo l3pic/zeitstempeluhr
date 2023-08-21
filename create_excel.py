@@ -45,7 +45,7 @@ else:
     file_name_to = sys.argv[5]
 
 
-workbook = xlsxwriter.Workbook('/var/www/html/excel/' + username + ' ' + file_name_from + ' bis ' + file_name_to + '.xlsx')
+workbook = xlsxwriter.Workbook('/var/www/html/excel/' + username + '_' + file_name_from + '_bis_' + file_name_to + '.xlsx')
 worksheet = workbook.add_worksheet()
 
 mycursor.execute(sql_get_data, val_get_data)
